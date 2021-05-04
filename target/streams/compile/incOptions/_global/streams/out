@@ -1,0 +1,30 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/target/scala-2.12/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageProductsData$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TransactionStagingSchema$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ProductsLandingSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ProductsLandingSchema$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageTransactionsData$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageLocationsData.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageTransactionsData$$typecreator1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageProductsData.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageTransactionsData$$typecreator2$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EnrichStoreSales.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TransactionStagingSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Driver$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GcsIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageLocationsData$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EnrichStoreSales$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EnrichmentSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GenerateReports$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StageTransactionsData.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LocationsStagingSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TransactionEnrichmentSchema$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TransactionEnrichmentSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GenerateReports.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LocationsStagingSchema$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StagingSchema.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Driver.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/target/scala-2.12/classes.bak[0m

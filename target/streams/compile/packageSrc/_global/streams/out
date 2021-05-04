@@ -1,0 +1,21 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/target/scala-2.12/acme_store_sales_data_pipeline_2.12-0.1-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/Driver.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/Driver.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/reporting/GenerateReports.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/reporting/GenerateReports.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/staging/StageProductsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/staging/StageProductsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/staging/StageTransactionsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/staging/StageTransactionsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/staging/StageLocationsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/staging/StageLocationsData.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/schema/StagingSchema.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/schema/StagingSchema.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/schema/EnrichmentSchema.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/schema/EnrichmentSchema.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/enrich/EnrichStoreSales.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/enrich/EnrichStoreSales.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ca/acme/store/generic/GcsIO.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/src/main/scala/ca/acme/store/generic/GcsIO.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,55 @@
+[0m[[0m[0minfo[0m] [0m[0m:: delivering :: default#acme_store_sales_data_pipeline_2.12;0.1 :: 0.1 :: release :: Tue May 04 11:50:13 EDT 2021[0m
+[0m[[0m[0mdebug[0m] [0m[0m	options = status=release pubdate=Tue May 04 11:50:13 EDT 2021 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to /Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_pipeline/target/scala-2.12/ivy-0.1.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deliver done (21ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0mlocal do not support transaction. ivy pattern does not use revision as a directory[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom.md5 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0minfo[0m] [0m[0m	published acme_store_sales_data_pipeline_2.12 to /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/poms/acme_store_sales_data_pipeline_2.12.pom[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0minfo[0m] [0m[0m	published acme_store_sales_data_pipeline_2.12 to /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/jars/acme_store_sales_data_pipeline_2.12.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0minfo[0m] [0m[0m	published acme_store_sales_data_pipeline_2.12 to /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/srcs/acme_store_sales_data_pipeline_2.12-sources.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0minfo[0m] [0m[0m	published acme_store_sales_data_pipeline_2.12 to /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/docs/acme_store_sales_data_pipeline_2.12-javadoc.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0mdebug[0m] [0m[0m/Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml.md5 (non-SNAPSHOT)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
+[0m[[0m[0minfo[0m] [0m[0m	published ivy to /Users/saha/.ivy2/local/default/acme_store_sales_data_pipeline_2.12/0.1/ivys/ivy.xml[0m

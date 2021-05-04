@@ -1,0 +1,174 @@
+21/05/04 21:52:37 INFO org.sparkproject.jetty.util.log: Logging initialized @3732ms to org.sparkproject.jetty.util.log.Slf4jLog
+21/05/04 21:52:37 INFO org.sparkproject.jetty.server.Server: jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 1.8.0_282-b08
+21/05/04 21:52:37 INFO org.sparkproject.jetty.server.Server: Started @3942ms
+21/05/04 21:52:37 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@8a4db78{HTTP/1.1, (http/1.1)}{0.0.0.0:37673}
+21/05/04 21:52:38 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-6caf-m/10.162.0.6:8032
+21/05/04 21:52:38 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-6caf-m/10.162.0.6:10200
+21/05/04 21:52:39 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+21/05/04 21:52:39 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+21/05/04 21:52:41 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1620164504080_0005
+21/05/04 21:52:42 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-6caf-m/10.162.0.6:8030
+Total amount of Sales by Province.
++----------------+-----------+
+|province        |total_sales|
++----------------+-----------+
+|BRITISH COLUMBIA|275536.450 |
+|SASKATCHEWAN    |54711.160  |
+|ALBERTA         |1512522.370|
+|MANITOBA        |234435.600 |
+|ONTARIO         |2183276.400|
++----------------+-----------+
+
+Total amount of Sales by Store.
++---------+-----------+
+|store_num|total_sales|
++---------+-----------+
+|9807     |1030351.770|
+|8142     |872304.400 |
+|6973     |600223.000 |
+|1396     |467581.280 |
+|7296     |385435.050 |
+|4823     |234156.570 |
+|7167     |113885.400 |
+|7104     |101377.430 |
+|1891     |76338.690  |
+|9802     |55884.250  |
+|6979     |50069.720  |
+|7317     |46439.700  |
+|9604     |42964.450  |
+|7125     |28011.520  |
+|6905     |19713.240  |
+|7247     |17828.780  |
+|7194     |17304.700  |
+|2428     |14467.610  |
+|7175     |14096.530  |
+|6946     |12490.780  |
++---------+-----------+
+only showing top 20 rows
+
+Total amount of Sales by Category.
++--------+-----------+
+|category|total_sales|
++--------+-----------+
+|null    |3676371.920|
+|fe148072|39543.470  |
+|cef3760b|38550.160  |
+|ffcec4a7|34951.150  |
+|e49d14f1|26665.080  |
+|d5a0a65d|22607.800  |
+|65d731c8|21481.070  |
+|687ed9e3|20948.800  |
+|e0b38f5b|18745.720  |
+|11566ced|18364.200  |
+|e934fcda|17827.150  |
+|5530c7b1|17144.060  |
+|190b5bb9|15984.200  |
+|a97ccc2c|14904.510  |
+|7703921f|14839.620  |
+|2588bef |14669.970  |
+|382cf3a |13475.830  |
+|d18e3df7|12050.570  |
+|206bde41|11038.310  |
+|1d25c013|10518.230  |
++--------+-----------+
+only showing top 20 rows
+
+Top 5 performing Stores by Province.
++---------------------+----------------+---------+-----------+---------------------------------+
+|store_rank_in_provice|province        |store_num|total_sales|avg_store_total_sales_in_province|
++---------------------+----------------+---------+-----------+---------------------------------+
+|1                    |BRITISH COLUMBIA|7167     |113885.400 |45922.742                        |
+|2                    |BRITISH COLUMBIA|7104     |101377.430 |45922.742                        |
+|3                    |BRITISH COLUMBIA|7125     |28011.520  |45922.742                        |
+|4                    |BRITISH COLUMBIA|7194     |17304.700  |45922.742                        |
+|5                    |BRITISH COLUMBIA|7175     |14096.530  |45922.742                        |
+|1                    |SASKATCHEWAN    |7317     |46439.700  |18237.053                        |
+|2                    |SASKATCHEWAN    |7309     |4487.250   |18237.053                        |
+|3                    |SASKATCHEWAN    |7313     |3784.210   |18237.053                        |
+|1                    |ALBERTA         |9807     |1030351.770|116347.875                       |
+|2                    |ALBERTA         |7296     |385435.050 |116347.875                       |
+|3                    |ALBERTA         |9802     |55884.250  |116347.875                       |
+|4                    |ALBERTA         |7247     |17828.780  |116347.875                       |
+|5                    |ALBERTA         |7226     |9994.970   |116347.875                       |
+|1                    |MANITOBA        |4823     |234156.570 |78145.200                        |
+|2                    |MANITOBA        |4861     |257.690    |78145.200                        |
+|3                    |MANITOBA        |7403     |21.340     |78145.200                        |
+|1                    |ONTARIO         |8142     |872304.400 |99239.836                        |
+|2                    |ONTARIO         |6973     |600223.000 |99239.836                        |
+|3                    |ONTARIO         |1396     |467581.280 |99239.836                        |
+|4                    |ONTARIO         |1891     |76338.690  |99239.836                        |
+|5                    |ONTARIO         |6979     |50069.720  |99239.836                        |
++---------------------+----------------+---------+-----------+---------------------------------+
+
++---------------------------+----------+--------+-----------+
+|category_rank_in_department|department|category|total_sales|
++---------------------------+----------+--------+-----------+
+|1                          |null      |null    |3676371.920|
+|1                          |24d07cc8  |50c418ce|19.080     |
+|1                          |34a2a7e0  |1578f747|0.000      |
+|1                          |435ca98   |e0b38f5b|18745.720  |
+|2                          |435ca98   |21b19a94|6474.860   |
+|3                          |435ca98   |640d751d|6240.200   |
+|4                          |435ca98   |2836e915|1913.390   |
+|5                          |435ca98   |e8eeb80f|312.880    |
+|1                          |5bffa719  |a4d52407|6541.740   |
+|2                          |5bffa719  |6c504249|2555.540   |
+|3                          |5bffa719  |fa3a1bd8|2150.030   |
+|4                          |5bffa719  |a121fb78|1643.760   |
+|5                          |5bffa719  |3ae24ac2|985.090    |
+|6                          |5bffa719  |999b3a55|423.080    |
+|7                          |5bffa719  |8f610228|365.840    |
+|8                          |5bffa719  |108c2838|338.030    |
+|9                          |5bffa719  |2dc2366a|158.450    |
+|10                         |5bffa719  |3f1695bd|56.770     |
+|1                          |7569cb40  |cef3760b|38550.160  |
+|1                          |a461091   |687ed9e3|20948.800  |
+|1                          |b947a4a9  |382cf3a |13475.830  |
+|2                          |b947a4a9  |3b380e17|6169.610   |
+|3                          |b947a4a9  |8b4f9982|6055.670   |
+|4                          |b947a4a9  |29ecadc0|2232.830   |
+|5                          |b947a4a9  |6761045 |1861.410   |
+|6                          |b947a4a9  |6023eeb7|1418.280   |
+|7                          |b947a4a9  |f2672c8c|1015.030   |
+|8                          |b947a4a9  |9db5a1ff|365.770    |
+|1                          |1a34cbb9  |fe148072|39543.470  |
+|2                          |1a34cbb9  |ffcec4a7|34951.150  |
+|3                          |1a34cbb9  |e49d14f1|26665.080  |
+|4                          |1a34cbb9  |11566ced|18364.200  |
+|5                          |1a34cbb9  |e934fcda|17827.150  |
+|6                          |1a34cbb9  |a97ccc2c|14904.510  |
+|7                          |1a34cbb9  |7703921f|14839.620  |
+|8                          |1a34cbb9  |d18e3df7|12050.570  |
+|9                          |1a34cbb9  |d47ae288|8135.600   |
+|10                         |1a34cbb9  |7b703ee1|7948.660   |
+|1                          |3ad17de9  |c280daf5|3709.050   |
+|2                          |3ad17de9  |43caffcc|1621.920   |
+|3                          |3ad17de9  |caddeda1|775.940    |
+|4                          |3ad17de9  |ecc023a5|37.380     |
+|5                          |3ad17de9  |14a2b392|-115.700   |
+|1                          |651b1068  |7aaa7a34|6951.720   |
+|2                          |651b1068  |ed1a6770|5358.110   |
+|3                          |651b1068  |e5475024|5325.440   |
+|4                          |651b1068  |c35a9e20|3434.380   |
+|5                          |651b1068  |b7dbc305|3221.130   |
+|6                          |651b1068  |5cb7b430|2698.320   |
+|7                          |651b1068  |2c1872bf|2435.770   |
++---------------------------+----------+--------+-----------+
+only showing top 50 rows
+
++----------------+---------+-----------+
+|province        |is_member|total_sales|
++----------------+---------+-----------+
+|ALBERTA         |No       |1163292.130|
+|ALBERTA         |Yes      |349230.240 |
+|BRITISH COLUMBIA|No       |113437.940 |
+|BRITISH COLUMBIA|Yes      |162098.510 |
+|MANITOBA        |No       |95836.340  |
+|MANITOBA        |Yes      |138599.260 |
+|ONTARIO         |No       |1240442.000|
+|ONTARIO         |Yes      |942834.400 |
+|SASKATCHEWAN    |No       |15905.260  |
+|SASKATCHEWAN    |Yes      |38805.900  |
++----------------+---------+-----------+
+
+21/05/04 21:53:20 INFO org.sparkproject.jetty.server.AbstractConnector: Stopped Spark@8a4db78{HTTP/1.1, (http/1.1)}{0.0.0.0:0}

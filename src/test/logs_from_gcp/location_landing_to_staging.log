@@ -1,0 +1,30 @@
+21/05/04 21:31:38 INFO org.sparkproject.jetty.util.log: Logging initialized @3638ms to org.sparkproject.jetty.util.log.Slf4jLog
+21/05/04 21:31:39 INFO org.sparkproject.jetty.server.Server: jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 1.8.0_282-b08
+21/05/04 21:31:39 INFO org.sparkproject.jetty.server.Server: Started @3861ms
+21/05/04 21:31:39 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@6b9760f5{HTTP/1.1, (http/1.1)}{0.0.0.0:40753}
+21/05/04 21:31:39 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-da6c-m/10.162.0.2:8032
+21/05/04 21:31:40 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-da6c-m/10.162.0.2:10200
+21/05/04 21:31:40 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+21/05/04 21:31:40 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+21/05/04 21:31:44 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1620163558543_0002
+21/05/04 21:31:45 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-da6c-m/10.162.0.2:8030
+gs://playground-s-11-5a90958c/landing/location.csv read by Spark
+21/05/04 21:32:17 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:17 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:18 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:18 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:20 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:20 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:20 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:20 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:20 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:21 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:22 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/_temporary/0/task_202105042132114246936308730501463_0002_m_000000/' directory.
+21/05/04 21:32:22 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/staging/location/' directory.
+gs://playground-s-11-5a90958c/staging/location/ written by Spark
+21/05/04 21:32:23 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/archive/landing/location/2021-05-04T21:32:22.420/_temporary/0/task_202105042132221735926567742550894_0003_m_000000/' directory.
+21/05/04 21:32:23 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-5a90958c/archive/landing/location/2021-05-04T21:32:22.420/' directory.
+gs://playground-s-11-5a90958c/landing/location.csv archived by Spark
+Deleting gs://playground-s-11-5a90958c/landing/location.csv file.
+Deleted gs://playground-s-11-5a90958c/landing/location.csv file.
+21/05/04 21:32:23 INFO org.sparkproject.jetty.server.AbstractConnector: Stopped Spark@6b9760f5{HTTP/1.1, (http/1.1)}{0.0.0.0:0}

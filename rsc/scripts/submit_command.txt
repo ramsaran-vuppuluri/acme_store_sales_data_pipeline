@@ -3,7 +3,8 @@ gs://playground-s-11-5a90958c/acme_store_sales_data_pipeline_2.12-0.1.jar
 playground-s-11-5a90958c
 stage-locations
 stage-transactions
-
+enrich
+reporting
 
 gs://playground-s-11-5a90958c/jars/api-common-1.10.1.jar
 gs://playground-s-11-5a90958c/jars/auto-value-annotations-1.7.4.jar

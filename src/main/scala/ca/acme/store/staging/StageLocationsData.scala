@@ -3,7 +3,11 @@ package ca.acme.store.staging
 /**
  * @author Ram Saran Vuppuluri
  *
- *         This object will read the location.csv placed in the GCS
+ *         This object will read the location.csv file in the landing zone and persist in the staging zone.The data is
+ *         partitioned at province level in staging zone. Original file is moved to archive zone and the copy from landing
+ *         zone is deleted.
+ *
+ *         When a new location.csv file is processed to staging zone the current file is overwritten.
  */
 
 import java.time.LocalDateTime
@@ -15,26 +19,20 @@ import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.types.StringType
 
 object StageLocationsData extends GcsIO {
-  def apply(spark: SparkSession, bucketName: String, objectName: String = "landing/location.csv"): Unit = {
-    val locationDF = readFromCSV(spark, bucketName, objectName)
+  /**
+   * This method will perform the core transformations of locations data that is read from landing zone before persisting
+   * into the staging zone.
+   *
+   * @param spark      Instance of spark session.
+   * @param bucketName Bucket name in which data is processed in.
+   * @param objectPath Object path, by default it will be "landing/location.csv"
+   */
+  def apply(spark: SparkSession, bucketName: String, objectPath: String = "landing/location.csv"): Unit = {
+    /*
+     * This common method will read the CSV files from GCS.
+     */
 
-    println(s"gs://$bucketName/$objectName read by Spark")
-
-    val locationDFColumns = LocationsStagingSchema.schema.map {
-      ele => ele.name
-    }
-
-    val locationDFToWrite = locationDF
-      .withColumn("store_location_key", col("store_location_key").cast(StringType))
-      .withColumn("region", col("region").cast(StringType))
-      .withColumn("province", col("province").cast(StringType))
-      .withColumn("city", col("city").cast(StringType))
-      .withColumn("postal_code", col("postal_code").cast(StringType))
-      .withColumn("banner", col("banner").cast(StringType))
-      .withColumn("store_num", col("store_num").cast(StringType))
-      .selectExpr(locationDFColumns: _*)
-
-    /**
+    /*
      * +------------------+------+----------------+-----------+-----------+--------+---------+
      * |store_location_key|region|province        |city       |postal_code|banner  |store_num|
      * +------------------+------+----------------+-----------+-----------+--------+---------+
@@ -61,23 +59,47 @@ object StageLocationsData extends GcsIO {
      * +------------------+------+----------------+-----------+-----------+--------+---------+
      * only showing top 20 rows
      */
+    val locationDF = readFromCSV(spark, bucketName, objectPath)
 
-    /**
+    println(s"gs://$bucketName/$objectPath read by Spark")
+
+    val locationDFColumns = LocationsStagingSchema.schema.map {
+      ele => ele.name
+    }
+
+    val locationDFToWrite = locationDF
+      .withColumn("store_location_key", col("store_location_key").cast(StringType))
+      .withColumn("region", col("region").cast(StringType))
+      .withColumn("province", col("province").cast(StringType))
+      .withColumn("city", col("city").cast(StringType))
+      .withColumn("postal_code", col("postal_code").cast(StringType))
+      .withColumn("banner", col("banner").cast(StringType))
+      .withColumn("store_num", col("store_num").cast(StringType))
+      .selectExpr(locationDFColumns: _*)
+
+
+
+    /*
      * Change the save mode to Append if we get only new Location data.
      */
-    locationDFToWrite.write
-      .mode(SaveMode.Overwrite)
-      .partitionBy(LocationsStagingSchema.partitionColumns: _*)
-      .parquet(s"gs://$bucketName/staging/location/")
+
+    /*
+     * This common method will write the dataframe into GCS in parquet format with snappy compression.
+     */
+    writeToParquet(locationDFToWrite, SaveMode.Overwrite, LocationsStagingSchema.partitionColumns, s"gs://$bucketName/staging/location/")
 
     println(s"gs://$bucketName/staging/location/ written by Spark")
 
-    locationDF.write
-      .option("header", "true")
-      .csv(s"gs://$bucketName/archive/landing/location/${LocalDateTime.now()}/")
+    /*
+     * This common method will write the dataframe into GCS in CSV format without any partitions.
+     */
+    writeToCSV(locationDF, SaveMode.Overwrite, s"gs://$bucketName/archive/landing/location/${LocalDateTime.now()}/")
 
     println(s"gs://$bucketName/landing/location.csv archived by Spark")
 
-    deleteObjectFromBucket(bucketName, objectName)
+    /*
+     * This method will delete the object in the bucket using the GCP IO API.
+     */
+    deleteObjectFromBucket(bucketName, objectPath)
   }
 }

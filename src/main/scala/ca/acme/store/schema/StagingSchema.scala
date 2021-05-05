@@ -3,7 +3,7 @@ package ca.acme.store.schema
 /**
  * @author Ram Saran Vuppuluri
  *
- *         This file contains the schema objects for reading the Location, Product and Transaction data.
+ *         This file contains the schema objects for writing the Location, Product and Transaction data.
  *
  *         Following are the Spark data types used by schema definitions in this file and their lower and upper limits.
  *
@@ -16,13 +16,19 @@ package ca.acme.store.schema
  *         Reference Document: https://spark.apache.org/docs/2.4.0/sql-reference.html
  */
 
-import org.apache.spark.sql.types.{DateType, DecimalType, DoubleType, IntegerType, LongType, StringType, StructField, StructType, TimestampType}
+import org.apache.spark.sql.types.{DateType, DoubleType, IntegerType, StringType, StructField, StructType}
 
+/**
+ * Trait that determines the schema attributes for any data frame that is written into Staging zone.
+ */
 trait StagingSchema {
   val schema: StructType
   val partitionColumns: Seq[String]
 }
 
+/**
+ * This object the Location Staging schema implementation.
+ */
 object LocationsStagingSchema extends StagingSchema {
   val schema = StructType(
     Array(
@@ -39,6 +45,9 @@ object LocationsStagingSchema extends StagingSchema {
   val partitionColumns: Seq[String] = Seq("province")
 }
 
+/**
+ * This object the Products Staging schema implementation.
+ */
 object ProductsLandingSchema extends StagingSchema {
   val schema = StructType(
     Array(
@@ -55,6 +64,9 @@ object ProductsLandingSchema extends StagingSchema {
   val partitionColumns: Seq[String] = Seq("department")
 }
 
+/**
+ * This object the Transactions Staging schema implementation.
+ */
 object TransactionStagingSchema extends StagingSchema {
   val schema = StructType(
     Array(

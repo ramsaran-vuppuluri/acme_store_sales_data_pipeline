@@ -1,13 +1,13 @@
-21/05/04 21:52:37 INFO org.sparkproject.jetty.util.log: Logging initialized @3732ms to org.sparkproject.jetty.util.log.Slf4jLog
-21/05/04 21:52:37 INFO org.sparkproject.jetty.server.Server: jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 1.8.0_282-b08
-21/05/04 21:52:37 INFO org.sparkproject.jetty.server.Server: Started @3942ms
-21/05/04 21:52:37 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@8a4db78{HTTP/1.1, (http/1.1)}{0.0.0.0:37673}
-21/05/04 21:52:38 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-6caf-m/10.162.0.6:8032
-21/05/04 21:52:38 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-6caf-m/10.162.0.6:10200
-21/05/04 21:52:39 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
-21/05/04 21:52:39 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
-21/05/04 21:52:41 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1620164504080_0005
-21/05/04 21:52:42 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-6caf-m/10.162.0.6:8030
+21/05/05 05:40:43 INFO org.sparkproject.jetty.util.log: Logging initialized @4020ms to org.sparkproject.jetty.util.log.Slf4jLog
+21/05/05 05:40:43 INFO org.sparkproject.jetty.server.Server: jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 1.8.0_282-b08
+21/05/05 05:40:43 INFO org.sparkproject.jetty.server.Server: Started @4239ms
+21/05/05 05:40:43 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@5b993d91{HTTP/1.1, (http/1.1)}{0.0.0.0:40431}
+21/05/05 05:40:44 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-5b74-m/10.162.0.5:8032
+21/05/05 05:40:44 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-5b74-m/10.162.0.5:10200
+21/05/05 05:40:45 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+21/05/05 05:40:45 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+21/05/05 05:40:47 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1620180628561_0013
+21/05/05 05:40:48 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-5b74-m/10.162.0.5:8030
 Total amount of Sales by Province.
 +----------------+-----------+
 |province        |total_sales|
@@ -19,6 +19,8 @@ Total amount of Sales by Province.
 |ONTARIO         |2183276.400|
 +----------------+-----------+
 
+21/05/05 05:41:33 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByProvince/_temporary/0/task_202105050541317006371593166557087_0006_m_000000/' directory.
+21/05/05 05:41:33 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByProvince/' directory.
 Total amount of Sales by Store.
 +---------+-----------+
 |store_num|total_sales|
@@ -46,6 +48,8 @@ Total amount of Sales by Store.
 +---------+-----------+
 only showing top 20 rows
 
+21/05/05 05:41:45 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByStore/_temporary/0/task_202105050541444086819001405645223_0022_m_000000/' directory.
+21/05/05 05:41:45 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByStore/' directory.
 Total amount of Sales by Category.
 +--------+-----------+
 |category|total_sales|
@@ -73,7 +77,15 @@ Total amount of Sales by Category.
 +--------+-----------+
 only showing top 20 rows
 
+21/05/05 05:41:54 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByCategory/_temporary/0/task_202105050541532660478476210849755_0038_m_000000/' directory.
+21/05/05 05:41:54 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByCategory/' directory.
 Top 5 performing Stores by Province.
+
+Answers following questions:
+1. Which Provinces and Stores are performing well and how much the top stores in each province performing in
+comparison with average store in the province.
+2. Top 5 Store in the province.
+
 +---------------------+----------------+---------+-----------+---------------------------------+
 |store_rank_in_provice|province        |store_num|total_sales|avg_store_total_sales_in_province|
 +---------------------+----------------+---------+-----------+---------------------------------+
@@ -100,17 +112,13 @@ Top 5 performing Stores by Province.
 |5                    |ONTARIO         |6979     |50069.720  |99239.836                        |
 +---------------------+----------------+---------+-----------+---------------------------------+
 
+21/05/05 05:42:04 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/topNPerformingStoresByProvince/_temporary/0/task_202105050542035453405339014367449_0050_m_000000/' directory.
+21/05/05 05:42:04 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/topNPerformingStoresByProvince/' directory.
 +---------------------------+----------+--------+-----------+
 |category_rank_in_department|department|category|total_sales|
 +---------------------------+----------+--------+-----------+
 |1                          |null      |null    |3676371.920|
-|1                          |24d07cc8  |50c418ce|19.080     |
 |1                          |34a2a7e0  |1578f747|0.000      |
-|1                          |435ca98   |e0b38f5b|18745.720  |
-|2                          |435ca98   |21b19a94|6474.860   |
-|3                          |435ca98   |640d751d|6240.200   |
-|4                          |435ca98   |2836e915|1913.390   |
-|5                          |435ca98   |e8eeb80f|312.880    |
 |1                          |5bffa719  |a4d52407|6541.740   |
 |2                          |5bffa719  |6c504249|2555.540   |
 |3                          |5bffa719  |fa3a1bd8|2150.030   |
@@ -123,6 +131,12 @@ Top 5 performing Stores by Province.
 |10                         |5bffa719  |3f1695bd|56.770     |
 |1                          |7569cb40  |cef3760b|38550.160  |
 |1                          |a461091   |687ed9e3|20948.800  |
+|1                          |24d07cc8  |50c418ce|19.080     |
+|1                          |435ca98   |e0b38f5b|18745.720  |
+|2                          |435ca98   |21b19a94|6474.860   |
+|3                          |435ca98   |640d751d|6240.200   |
+|4                          |435ca98   |2836e915|1913.390   |
+|5                          |435ca98   |e8eeb80f|312.880    |
 |1                          |b947a4a9  |382cf3a |13475.830  |
 |2                          |b947a4a9  |3b380e17|6169.610   |
 |3                          |b947a4a9  |8b4f9982|6055.670   |
@@ -141,6 +155,7 @@ Top 5 performing Stores by Province.
 |8                          |1a34cbb9  |d18e3df7|12050.570  |
 |9                          |1a34cbb9  |d47ae288|8135.600   |
 |10                         |1a34cbb9  |7b703ee1|7948.660   |
+|1                          |89d0c9d1  |511e5c1b|78.320     |
 |1                          |3ad17de9  |c280daf5|3709.050   |
 |2                          |3ad17de9  |43caffcc|1621.920   |
 |3                          |3ad17de9  |caddeda1|775.940    |
@@ -152,10 +167,11 @@ Top 5 performing Stores by Province.
 |4                          |651b1068  |c35a9e20|3434.380   |
 |5                          |651b1068  |b7dbc305|3221.130   |
 |6                          |651b1068  |5cb7b430|2698.320   |
-|7                          |651b1068  |2c1872bf|2435.770   |
 +---------------------------+----------+--------+-----------+
 only showing top 50 rows
 
+21/05/05 05:42:14 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/topNProductCategoriesByDepartment/_temporary/0/task_202105050542146262552993022519389_0062_m_000000/' directory.
+21/05/05 05:42:14 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/topNProductCategoriesByDepartment/' directory.
 +----------------+---------+-----------+
 |province        |is_member|total_sales|
 +----------------+---------+-----------+
@@ -171,4 +187,8 @@ only showing top 50 rows
 |SASKATCHEWAN    |Yes      |38805.900  |
 +----------------+---------+-----------+
 
-21/05/04 21:53:20 INFO org.sparkproject.jetty.server.AbstractConnector: Stopped Spark@8a4db78{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+21/05/05 05:42:24 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesMadeByLoyaltyVsNonLoyalty/_temporary/0/task_202105050542225838991936576015756_0078_m_000000/' directory.
+21/05/05 05:42:24 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesMadeByLoyaltyVsNonLoyalty/' directory.
+21/05/05 05:42:29 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByYear/_temporary/0/task_202105050542299079807727925591515_0084_m_000000/' directory.
+21/05/05 05:42:29 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageFileSystem: Successfully repaired 'gs://playground-s-11-1df26c03/reporting/salesByYear/' directory.
+21/05/05 05:42:30 INFO org.sparkproject.jetty.server.AbstractConnector: Stopped Spark@5b993d91{HTTP/1.1, (http/1.1)}{0.0.0.0:0}

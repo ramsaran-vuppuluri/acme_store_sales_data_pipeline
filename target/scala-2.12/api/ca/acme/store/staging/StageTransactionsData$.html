@@ -278,10 +278,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="ca.acme.store.staging.StageTransactionsData#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):Unit"></a><a id="apply(SparkSession,String,String):Unit"></a>
+    </li><li name="ca.acme.store.staging.StageTransactionsData#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPathPrefix:String):Unit"></a><a id="apply(SparkSession,String,String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#apply(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):Unit" title="Permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#apply(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPathPrefix:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -290,10 +290,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectName">objectName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;landing/trans_fact_*.csv&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">apply</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectPathPrefix">objectPathPrefix: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;landing/&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">This method will perform the core transformations of transaction data that is read from landing zone before persisting
+into the staging zone.</p><div class="fullcomment"><div class="comment cmt"><p>This method will perform the core transformations of transaction data that is read from landing zone before persisting
+into the staging zone.
+</p></div><dl class="paramcmts block"><dt class="param">spark</dt><dd class="cmt"><p>Instance of spark session.</p></dd><dt class="param">bucketName</dt><dd class="cmt"><p>Bucket name in which data is processed in.</p></dd><dt class="param">objectPathPrefix</dt><dd class="cmt"><p>Object path, by default it will be &quot;landing/&quot;</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -334,7 +337,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="ca.acme.store.generic.GcsIO#deleteObjectFromBucket" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="ca.acme.store.generic.GcsIO#deleteObjectFromBucket" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="deleteObjectFromBucket(bucketName:String,objectName:String):Unit"></a><a id="deleteObjectFromBucket(String,String):Unit"></a>
       <span class="permalink">
       <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#deleteObjectFromBucket(bucketName:String,objectName:String):Unit" title="Permalink">
@@ -349,7 +352,8 @@
         <span class="name">deleteObjectFromBucket</span><span class="params">(<span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectName">objectName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
+      <p class="shortcomment cmt">This method will delete the object in the bucket using the GCP IO API.</p><div class="fullcomment"><div class="comment cmt"><p>This method will delete the object in the bucket using the GCP IO API.
+</p></div><dl class="paramcmts block"><dt class="param">bucketName</dt><dd class="cmt"><p>Bucket name in which data is processed in.</p></dd><dt class="param">objectName</dt><dd class="cmt"><p>Object name.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -423,6 +427,23 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="ca.acme.store.generic.GcsIO#getListOfFilesFromPath" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getListOfFilesFromPath(bucketName:String,pathPrefix:String):com.google.api.gax.paging.Page[com.google.cloud.storage.Blob]"></a><a id="getListOfFilesFromPath(String,String):Page[Blob]"></a>
+      <span class="permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#getListOfFilesFromPath(bucketName:String,pathPrefix:String):com.google.api.gax.paging.Page[com.google.cloud.storage.Blob]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getListOfFilesFromPath</span><span class="params">(<span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="pathPrefix">pathPrefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="com.google.api.gax.paging.Page">Page</span>[<span class="extype" name="com.google.cloud.storage.Blob">Blob</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">This method will return the list of files in the path.</p><div class="fullcomment"><div class="comment cmt"><p>This method will return the list of files in the path.
+</p></div><dl class="paramcmts block"><dt class="param">bucketName</dt><dd class="cmt"><p>Bucket name in which data is processed in.</p></dd><dt class="param">pathPrefix</dt><dd class="cmt"><p>Relative path prefix.</p></dd><dt>returns</dt><dd class="cmt"><p>Sequence of pagenated Blob instances.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -512,10 +533,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="ca.acme.store.generic.GcsIO#readFromCSV" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="readFromCSV(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):org.apache.spark.sql.DataFrame"></a><a id="readFromCSV(SparkSession,String,String):DataFrame"></a>
+    </li><li name="ca.acme.store.generic.GcsIO#readFromCSV" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="readFromCSV(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPath:String):org.apache.spark.sql.DataFrame"></a><a id="readFromCSV(SparkSession,String,String):DataFrame"></a>
       <span class="permalink">
-      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#readFromCSV(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):org.apache.spark.sql.DataFrame" title="Permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#readFromCSV(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPath:String):org.apache.spark.sql.DataFrame" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -524,14 +545,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readFromCSV</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectName">objectName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
+        <span class="name">readFromCSV</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectPath">objectPath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
-    </li><li name="ca.acme.store.generic.GcsIO#readFromParquet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="readFromParquet(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):org.apache.spark.sql.DataFrame"></a><a id="readFromParquet(SparkSession,String,String):DataFrame"></a>
+      <p class="shortcomment cmt">This common method will read the CSV files from GCS.</p><div class="fullcomment"><div class="comment cmt"><p>This common method will read the CSV files from GCS.
+</p></div><dl class="paramcmts block"><dt class="param">spark</dt><dd class="cmt"><p>Instance of spark session.</p></dd><dt class="param">bucketName</dt><dd class="cmt"><p>Bucket name in which data is processed in.</p></dd><dt class="param">objectPath</dt><dd class="cmt"><p>objectPath of the csv file.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
+    </li><li name="ca.acme.store.generic.GcsIO#readFromParquet" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="readFromParquet(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPath:String):org.apache.spark.sql.DataFrame"></a><a id="readFromParquet(SparkSession,String,String):DataFrame"></a>
       <span class="permalink">
-      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#readFromParquet(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectName:String):org.apache.spark.sql.DataFrame" title="Permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#readFromParquet(spark:org.apache.spark.sql.SparkSession,bucketName:String,objectPath:String):org.apache.spark.sql.DataFrame" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,26 +562,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readFromParquet</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectName">objectName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
+        <span class="name">readFromParquet</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="bucketName">bucketName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectPath">objectPath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
-    </li><li name="ca.acme.store.generic.GcsIO#storage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="storage:com.google.cloud.storage.Storage"></a><a id="storage:Storage"></a>
-      <span class="permalink">
-      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#storage:com.google.cloud.storage.Storage" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">storage</span><span class="result">: <span class="extype" name="com.google.cloud.storage.Storage">Storage</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
+      <p class="shortcomment cmt">This method will read from parquet files and generate Spark DataFrame.</p><div class="fullcomment"><div class="comment cmt"><p>This method will read from parquet files and generate Spark DataFrame.
+</p></div><dl class="paramcmts block"><dt class="param">spark</dt><dd class="cmt"><p>Instance of spark session.</p></dd><dt class="param">bucketName</dt><dd class="cmt"><p>Bucket name in which data is processed in.</p></dd><dt class="param">objectPath</dt><dd class="cmt"><p>Object path of the parquet file.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -660,6 +667,40 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="ca.acme.store.generic.GcsIO#writeToCSV" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeToCSV(dataFrame:org.apache.spark.sql.DataFrame,mode:org.apache.spark.sql.SaveMode,objectWritePath:String):Unit"></a><a id="writeToCSV(DataFrame,SaveMode,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#writeToCSV(dataFrame:org.apache.spark.sql.DataFrame,mode:org.apache.spark.sql.SaveMode,objectWritePath:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeToCSV</span><span class="params">(<span name="dataFrame">dataFrame: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="mode">mode: <span class="extype" name="org.apache.spark.sql.SaveMode">SaveMode</span></span>, <span name="objectWritePath">objectWritePath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This common method will write the dataframe into GCS in CSV format without any partitions.</p><div class="fullcomment"><div class="comment cmt"><p>This common method will write the dataframe into GCS in CSV format without any partitions.
+</p></div><dl class="paramcmts block"><dt class="param">dataFrame</dt><dd class="cmt"><p>Dataframe instance.</p></dd><dt class="param">mode</dt><dd class="cmt"><p>Save Mode</p></dd><dt class="param">objectWritePath</dt><dd class="cmt"><p>Path at which dataframe should be persisted.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
+    </li><li name="ca.acme.store.generic.GcsIO#writeToParquet" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeToParquet(dataFrame:org.apache.spark.sql.DataFrame,mode:org.apache.spark.sql.SaveMode,partitionColumns:Seq[String],objectWritePath:String):Unit"></a><a id="writeToParquet(DataFrame,SaveMode,Seq[String],String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../ca/acme/store/staging/StageTransactionsData$.html#writeToParquet(dataFrame:org.apache.spark.sql.DataFrame,mode:org.apache.spark.sql.SaveMode,partitionColumns:Seq[String],objectWritePath:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeToParquet</span><span class="params">(<span name="dataFrame">dataFrame: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="mode">mode: <span class="extype" name="org.apache.spark.sql.SaveMode">SaveMode</span></span>, <span name="partitionColumns">partitionColumns: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="objectWritePath">objectWritePath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This common method will write the dataframe into GCS in parquet format with snappy compression.</p><div class="fullcomment"><div class="comment cmt"><p>This common method will write the dataframe into GCS in parquet format with snappy compression.
+</p></div><dl class="paramcmts block"><dt class="param">dataFrame</dt><dd class="cmt"><p>Dataframe instance.</p></dd><dt class="param">mode</dt><dd class="cmt"><p>Save Mode</p></dd><dt class="param">partitionColumns</dt><dd class="cmt"><p>Sequence of partition columns</p></dd><dt class="param">objectWritePath</dt><dd class="cmt"><p>Path at which dataframe should be persisted.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../generic/GcsIO.html" class="extype" name="ca.acme.store.generic.GcsIO">GcsIO</a></dd></dl></div>
     </li>
               </ol>
             </div>

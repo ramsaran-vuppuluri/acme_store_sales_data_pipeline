@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter
 
 import ca.acme.store.schema.TransactionStagingSchema
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
-import org.apache.spark.sql.functions.{col, count, lit, max, min, month, to_date, when, year}
+import org.apache.spark.sql.functions.{col, count, lit, max, min, month, to_date, when, year,countDistinct}
 import org.apache.spark.sql.types.{DateType, DecimalType, DoubleType, IntegerType, StringType}
 import org.scalatest.FunSuite
 
@@ -170,5 +170,4 @@ class TransactionFactDataTest extends FunSuite {
 
     println(new SimpleDateFormat("MM-dd-yyyy").format(str))
   }
-
 }

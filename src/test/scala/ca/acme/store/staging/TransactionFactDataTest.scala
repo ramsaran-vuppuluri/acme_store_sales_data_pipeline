@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter
 
 import ca.acme.store.schema.TransactionStagingSchema
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
-import org.apache.spark.sql.functions.{col, count, lit, max, min, month, to_date, when, year,countDistinct}
+import org.apache.spark.sql.functions.{col, count, lit, max, min, month, to_date, when, year, countDistinct}
 import org.apache.spark.sql.types.{DateType, DecimalType, DoubleType, IntegerType, StringType}
 import org.scalatest.FunSuite
 
@@ -138,8 +138,6 @@ class TransactionFactDataTest extends FunSuite {
 
           nullCheck(df1)
 
-          df1.write.mode(SaveMode.Append).parquet("./src/test/resources/test/")
-
         } else {
           val df1 = df.withColumn("trans_dt_1", col("trans_dt").cast(DateType))
             .withColumn("trans_dt", when(col("trans_dt_1").isNull, to_date(col("trans_dt"), "MM/dd/yyyy")).otherwise(col("trans_dt_1")))
@@ -153,16 +151,10 @@ class TransactionFactDataTest extends FunSuite {
           println(df1.cache().count())
 
           nullCheck(df1)
-
-          df1.write.mode(SaveMode.Append).parquet("./src/test/resources/test/")
         }
 
       }
     }
-  }
-
-  test("productKey") {
-    transFactDF.where(col("product_key") === "999999999999513").show(30, false)
   }
 
   test("dateFormatTest") {
